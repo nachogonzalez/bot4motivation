@@ -25,6 +25,7 @@ maxRows = sheet_ranges.max_row
 indexLetter = "A"
 indexNumber = 1
 index = indexLetter + str(indexNumber)
+
 while indexNumber < maxRows:
 	quotesList.append(sheet_ranges[index].value)
 	indexNumber = indexNumber + 1
@@ -37,7 +38,6 @@ randomIndex = random.randrange(maxRows)
 tweet = (quotesList[randomIndex] + "\n #Motivation4Success #luxury #lifestyle #enterpreneurship #hardwork #success #quotes #business")
 
 # Post the tweet
-print("Vamos a lanzar el tweet")
 api.update_status(tweet)
 
 # Show logs on console
