@@ -4,9 +4,10 @@
 bot4motivation
 
 ## Description
-Twitter bot that posts regularly motivational quotes.
+Twitter bot that posts motivational quotes.
 
 ## Installation
+Deploy the script with python3 scriptMotivation4Success.py. You can automate it deploying with a scheduler in a cloud environment (for example Amazon Web Services, Azure, Google Cloud Platform...)
 
 ## Usage
 
