@@ -19,7 +19,7 @@ api = tweepy.API(auth)
 
 # Get data from xlsx file with all the quotes and feed the list
 quotesList = []
-wb = load_workbook(filename = 'MotivationalQuotesv21.xlsx')
+wb = load_workbook(filename = '/home/jdk6280/tools/bot4motivation/MotivationalQuotesv21.xlsx')
 sheet_ranges = wb['Sheet1']
 maxRows = sheet_ranges.max_row
 indexLetter = "A"
@@ -35,7 +35,7 @@ while indexNumber < maxRows:
 randomIndex = random.randrange(maxRows)
 
 # Build the tweet
-tweet = (quotesList[randomIndex] + "\n #Motivation4Success #luxury #lifestyle #enterpreneurship #hardwork #success #quotes #business")
+tweet = (quotesList[randomIndex] + "\n #Motivation4Success #inspiration #luxury #lifestyle #enterpreneurship #hardwork #success #quotes #business")
 
 # Post the tweet
 api.update_status(tweet)
