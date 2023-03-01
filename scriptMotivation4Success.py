@@ -4,6 +4,7 @@ import random
 from datetime import date
 from datetime import datetime
 from openpyxl import load_workbook
+from loguru import logger
 
 # Twitter authentication using tweepy
 apiKey = "FeCDkJOLyYUNLxoRDR7hYHS0a"
@@ -41,9 +42,9 @@ tweet = (quotesList[randomIndex] + "\n #Motivation4Success #inspiration #luxury 
 api.update_status(tweet)
 
 # Show logs on console
-print("scriptMotivation4Success: " + str(datetime.now()))
-print("Number of quotes available: " + str(maxRows))
-print("Random quote: " + str(randomIndex))
-print("Tweet posted")
-print("------------")
-print(tweet)
+logger.info("scriptMotivation4Success: " + str(datetime.now()))
+logger.info("Number of quotes available: " + str(maxRows))
+logger.info("Random quote: " + str(randomIndex))
+logger.info("Tweet posted")
+logger.info("------------")
+logger.info(tweet)
