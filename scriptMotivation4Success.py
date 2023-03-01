@@ -19,7 +19,7 @@ api = tweepy.API(auth)
 
 # Get data from xlsx file with all the quotes and feed the list
 quotesList = []
-wb = load_workbook(filename = '/home/jdk6280/tools/bot4motivation/MotivationalQuotesv21.xlsx')
+wb = load_workbook(filename = './MotivationalQuotesv21.xlsx')
 sheet_ranges = wb['Sheet1']
 maxRows = sheet_ranges.max_row
 indexLetter = "A"
